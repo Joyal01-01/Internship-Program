@@ -62,7 +62,7 @@ export default function Home() {
 
 			<section className="section opportunities" id="opportunities"><div className="container"><div className="section-head"><div><div className="eyebrow">Featured roles</div><h2>Make your mark.</h2></div><a className="view-all" href="#all-opportunities">View all opportunities →</a></div><div className="opportunity-grid">{opportunities.map((item) => <article className="card opportunity" key={item.title}><div><div className="tag">{item.tag}</div><h3>{item.title}</h3><div className="meta"><span>{item.company}</span><span>·</span><span>{item.location}</span></div></div><div className="meta">{item.type}<span>→</span></div></article>)}</div></div></section>
 
-			<section className="section cta" id="about"><div className="container"><div className="eyebrow">Ready when you are</div><h2>Good things are ahead.</h2><p>Create your profile today and take the first step towards an opportunity built around your potential.</p><a className="button" href="#signup">Create your profile →</a></div></section>
+			<section className="section cta" id="about"><div className="container"><div className="eyebrow">Ready when you are</div><h2>Good things are ahead.</h2><p>Create your profile today and take the first step towards an opportunity built around your potential and your ambition.</p><a className="button" href="#signup">Create your profile →</a></div></section>
 			<footer className="container"><span>© {new Date().getFullYear()} internship.</span><span>Built for ambitious beginnings.</span></footer>
 		</main>
 	);
