@@ -21,9 +21,9 @@ export default function Home() {
 				.home-page { overflow: hidden; } .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
 				.nav { display:flex; align-items:center; justify-content:space-between; padding:26px 0; }
 				.logo { font-size:22px; font-weight:800; letter-spacing:-1px; } .logo span { color:#e47c45; }
-				.nav-links { display:flex; gap:30px; font-size:14px; color:#52605a; } .nav-links a:hover { color:#e47c45; }
+				.nav-links { display:flex; gap:30px; font-size:14px; color:#52605a; } .nav-links a:hover { color:#e47c45; transition: color 0.3s ease; }
 				.nav-actions { display:flex; align-items:center; gap:18px; font-size:14px; font-weight:600; }
-				.button { display:inline-block; border:0; border-radius:8px; padding:13px 21px; background:#e47c45; color:white; font-weight:700; cursor:pointer; }
+				.button { display:inline-block; border:0; border-radius:8px; padding:13px 21px; background:#e47c45; color:white; font-weight:700; cursor:pointer; transition: background 0.3s ease; }
 				.button:hover { background:#cc6835; } .button.light { background:#eaf1e9; color:#284333; }
 				.hero { padding:78px 0 100px; background:linear-gradient(120deg,#edf5ec 0%,#f8faf7 65%); }
 				.hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:center; }
@@ -42,7 +42,8 @@ export default function Home() {
 				.benefits { display:grid; grid-template-columns:repeat(3,1fr); gap:38px; } .benefit { border-top:1px solid #d6dfd7; padding-top:20px; }
 				.number { color:#e47c45; font-weight:800; } .benefit h3 { font-size:20px; margin:24px 0 10px; } .benefit p { color:#68756d; line-height:1.6; margin:0; }
 				.opportunities { background:#24412f; color:white; } .opportunities .section-head p { color:#c3d1c5; }
-				.opportunity-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; } .opportunity { color:#17251f; padding:24px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; }
+				.opportunity-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; } .opportunity { color:#17251f; padding:24px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; transition: transform 0.2s ease; }
+				.opportunity:hover { transform: translateY(-4px); }
 				.tag { color:#e47c45; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1px; } .opportunity h3 { margin:18px 0 8px; font-size:21px; } .meta { color:#718078; font-size:14px; display:flex; gap:10px; flex-wrap:wrap; }
 				.view-all { color:white; border-bottom:1px solid #90aa98; padding-bottom:3px; font-size:14px; }
 				.cta { text-align:center; background:#f1e9dd; } .cta p { color:#68756d; max-width:510px; margin:16px auto 28px; line-height:1.6; }
