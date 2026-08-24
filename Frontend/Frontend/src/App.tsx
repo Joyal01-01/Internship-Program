@@ -1,5 +1,4 @@
 import { IncrementPage } from "./Component/incrementPage";
-import Button from "./Component/Button";
 import ProductList from "./Component/productList";
 
 const products = [
@@ -11,21 +10,29 @@ const products = [
 function App() {
   const isAboutPage = window.location.pathname.toLowerCase() === "/about";
 
-  if (isAboutPage) {
-    return (
-      <>
-        <h1>About Page</h1>
-        <p>This is the about page.</p>
-        <Button label="Go to Home Page" onClick={() => (window.location.pathname = "/")} />
-      </>
-    );
-  }
-
   return (
     <>
-      <IncrementPage />
-      <ProductList product={products} />
-      <Button label="Go to About Page" onClick={() => (window.location.pathname = "/about")} />
+      <nav className="site-nav" aria-label="Primary navigation">
+        <a href="/" aria-current={!isAboutPage ? "page" : undefined}>
+          Home
+        </a>
+        <a href="/about" aria-current={isAboutPage ? "page" : undefined}>
+          About
+        </a>
+      </nav>
+      <main>
+        {isAboutPage ? (
+          <>
+            <h1>About Page</h1>
+            <p>This is the about page.</p>
+          </>
+        ) : (
+          <>
+            <IncrementPage />
+            <ProductList product={products} />
+          </>
+        )}
+      </main>
     </>
   );
 }
