@@ -14,9 +14,33 @@ const ProductList = ({product}: {product:Product[]}) => {
     }, [product]);
     
     return (
-        <div>
-            <h1>Total: {total}</h1>
-        </div>
+        <section className="w-100" aria-labelledby="product-list-heading">
+            <h2 id="product-list-heading">Products</h2>
+            <div className="table-responsive">
+                <table className="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col" className="text-end">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {product.map(({ id, price }) => (
+                            <tr key={id}>
+                                <th scope="row">Product {id}</th>
+                                <td className="text-end">{price.toLocaleString("en-GB", { style: "currency", currency: "GBP" })}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td className="text-end fw-bold">{total.toLocaleString("en-GB", { style: "currency", currency: "GBP" })}</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
     );
 }
 
