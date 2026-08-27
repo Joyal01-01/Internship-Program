@@ -6,4 +6,4 @@ const Button = ({label, onClick}: {label:string; onClick: ()=> void}) => {
     )
 }
 
-export default Button
+export default Button  
